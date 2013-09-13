@@ -1,0 +1,78 @@
+<exporter>
+	<name>haxebox-json</name>
+	<displayName>Haxebox (JSON)</displayName>
+    <description>Exporter for Haxebox</description>
+	<version>1.0</version>
+	<yAxisDirection>down</yAxisDirection>
+	<physicsEngine>box2d</physicsEngine>
+	<template>haxebox.json</template>
+	<fileExtension>json</fileExtension>
+	<anchorPoint>
+		<enabled>yes</enabled>
+	</anchorPoint>
+	<origin>
+        <type>anchorPoint</type>
+	    <relX>0.5</relX>
+		<relY>0.5</relY>
+    </origin>
+    <supportsCircles>yes</supportsCircles>
+	<body>
+        <parameter>
+            <name>bodyType</name>
+            <displayName>Body Type</displayName>
+            <type>string</type>
+            <default>dynamic</default>
+        </parameter>
+	</body>
+	<global>
+	</global>
+	<fixture>
+        <parameter>
+            <name>isSensor</name>
+            <displayName>Is Sensor</displayName>
+            <type>bool</type>
+            <default>false</default>
+        </parameter>
+        <parameter>
+            <name>density</name>
+            <displayName>Density</displayName>
+            <type>float</type>
+            <min>-1000</min>
+            <max>1000</max>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>elasticity</name>
+            <displayName>Elasticity</displayName>
+            <type>float</type>
+            <min>0</min>
+            <max>1000</max>
+            <default>0.0</default>
+        </parameter>
+        <parameter>
+            <name>dynamicFriction</name>
+            <displayName>Dynamic Friction</displayName>
+            <type>float</type>
+            <min>0</min>
+            <max>1000</max>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>staticFriction</name>
+            <displayName>Static Friction</displayName>
+            <type>float</type>
+            <min>-1000</min>
+            <max>1000</max>
+            <default>2.0</default>
+        </parameter>
+        <parameter>
+            <name>rollingFriction</name>
+            <displayName>Rolling Friction</displayName>
+            <type>float</type>
+            <min>-1000</min>
+            <max>1000</max>
+            <default>0.001</default>
+        </parameter>
+    </fixture>
+</exporter>
+

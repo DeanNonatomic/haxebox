@@ -1,0 +1,51 @@
+{ {% for body in bodies %}
+	"{{body.name}}": {
+		"size": {
+			"width": {{body.size.width}},
+			"height": {{body.size.height}}
+		},
+		"anchorPoint": {
+			"x": {{body.anchorPointAbs.x}},
+			"y": {{body.anchorPointAbs.y}}
+		},
+		"anchorPointRelative": {
+			"x": {{body.anchorPointRel.x}},
+			"y": {{body.anchorPointRel.y}}
+		},
+		"bodyType": "{{body.bodyType}}",
+		"fixtures": [{% for fixture in body.fixtures %}
+			{
+				"isSensor": {{fixture.isSensor}},
+				"density": {{fixture.density}},
+				"elasticity": {{fixture.elasticity}},
+				"dynamicFriction": {{fixture.dynamicFriction}},
+				"staticFriction": {{fixture.staticFriction}},
+				"rollingFriction": {{fixture.rollingFriction}},
+				"type": "{{fixture.type}}",
+				"isCircle": {{fixture.isCircle}},{% if fixture.isCircle %}
+				"center": {
+					"x": {{fixture.center.x}},
+					"y": {{fixture.center.y}}
+				},
+				"radius": {{fixture.radius}}
+				{% else %}
+				"hull": [{% for point in fixture.hull %}
+					{
+						"x": {{point.x}},
+						"y": {{point.y}}
+					}{% if not forloop.last %},{% endif %}{% endfor %}
+				],
+				"polygons": [{% for polygon in fixture.polygons %}
+					{
+						"points": [{% for point in polygon %}
+							{
+								"x": {{point.x}},
+								"y": {{point.y}}
+							}{% if not forloop.last %},{% endif %}{% endfor %}
+						]
+					}{% if not forloop.last %},{% endif %}{% endfor %}
+				]{% endif %}
+			}{% if not forloop.last %},{% endif %}{% endfor %}
+		]
+	}{% if not forloop.last %},{% endif %}{% endfor %}
+}
