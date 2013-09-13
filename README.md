@@ -12,11 +12,11 @@ Then you can use the 'com.haxebox.factory.PhysicsFactory.hx' class to read the e
 
 // To load in the exported data, pass in the address to the JSON file to 'loadPhysicsData',  
 // but leave out the '.json' extension. You only need to do this once.  
-PhysicsFactory.loadPhysicsData("data/ExamplePhysicsData");
+PhysicsFactory.loadPhysicsData("data/ExamplePhysicsData");  
 
 // Then get a new Nape body out of PhysicsFactory class by passing in the body name  
 // and position data to 'createPhysicsBody'.  
 // Do this for each new body you wish to create.  
-var x = 50;
-var y = 50;
-var body = PhysicsFactory.createPhysicsBody("ExampleBox", x, y);
+var x = 50;  
+var y = 50;  
+var body = PhysicsFactory.createPhysicsBody("ExampleBox", x, y);  
