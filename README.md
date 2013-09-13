@@ -19,4 +19,4 @@ PhysicsFactory.loadPhysicsData("data/ExamplePhysicsData");
 // Do this for each new body you wish to create.  
 var x = 50;  
 var y = 50;  
-var body = PhysicsFactory.createPhysicsBody("ExampleBox", x, y);  
+var body = PhysicsFactory.createPhysicsBody("ExampleBox", x, y).body;  
