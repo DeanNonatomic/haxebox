@@ -1,0 +1,176 @@
+{ 
+	"Floor": {
+		"size": {
+			"width": 842,
+			"height": 21
+		},
+		"anchorPoint": {
+			"x": 421,
+			"y": 10.5
+		},
+		"anchorPointRelative": {
+			"x": 0.5,
+			"y": 0.5
+		},
+		"bodyType": "static",
+		"fixtures": [
+			{
+				"isSensor": false,
+				"density": 2,
+				"elasticity": 0,
+				"dynamicFriction": 1,
+				"staticFriction": 2,
+				"rollingFriction": 0.001,
+				"type": "POLYGON",
+				"isCircle": false,
+				"hull": [
+					{
+						"x": -421,
+						"y": -10.5
+					},
+					{
+						"x": 422,
+						"y": -10.5
+					},
+					{
+						"x": 422,
+						"y": 10.5
+					},
+					{
+						"x": -421,
+						"y": 10.5
+					}
+				],
+				"polygons": [
+					{
+						"points": [
+							{
+								"x": 422,
+								"y": -10.5
+							},
+							{
+								"x": 422,
+								"y": 10.5
+							},
+							{
+								"x": -421,
+								"y": 10.5
+							},
+							{
+								"x": -421,
+								"y": -10.5
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"Bike": {
+		"size": {
+			"width": 185,
+			"height": 120
+		},
+		"anchorPoint": {
+			"x": 92.5,
+			"y": 60
+		},
+		"anchorPointRelative": {
+			"x": 0.5,
+			"y": 0.5
+		},
+		"bodyType": "dynamic",
+		"fixtures": [
+			{
+				"isSensor": false,
+				"density": 1,
+				"elasticity": 0,
+				"dynamicFriction": 1,
+				"staticFriction": 2,
+				"rollingFriction": 0.001,
+				"type": "CIRCLE",
+				"isCircle": true,
+				"center": {
+					"x": -56.5,
+					"y": 22.75
+				},
+				"radius": 35
+				
+			},
+			{
+				"isSensor": false,
+				"density": 1,
+				"elasticity": 0,
+				"dynamicFriction": 1,
+				"staticFriction": 2,
+				"rollingFriction": 0.001,
+				"type": "CIRCLE",
+				"isCircle": true,
+				"center": {
+					"x": 56,
+					"y": 22.75
+				},
+				"radius": 35.5105618091294
+				
+			},
+			{
+				"isSensor": false,
+				"density": 1,
+				"elasticity": 0,
+				"dynamicFriction": 1,
+				"staticFriction": 2,
+				"rollingFriction": 0.001,
+				"type": "POLYGON",
+				"isCircle": false,
+				"hull": [
+					{
+						"x": 35.5,
+						"y": -60
+					},
+					{
+						"x": 45.5,
+						"y": -14
+					},
+					{
+						"x": 20.5,
+						"y": 35
+					},
+					{
+						"x": -20.5,
+						"y": 38
+					},
+					{
+						"x": -46.5,
+						"y": -43
+					}
+				],
+				"polygons": [
+					{
+						"points": [
+							{
+								"x": 35.5,
+								"y": -60
+							},
+							{
+								"x": 45.5,
+								"y": -14
+							},
+							{
+								"x": 20.5,
+								"y": 35
+							},
+							{
+								"x": -20.5,
+								"y": 38
+							},
+							{
+								"x": -46.5,
+								"y": -43
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

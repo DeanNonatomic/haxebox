@@ -18,7 +18,7 @@ class PhysicsFactory {
 	private static var bodies:Map<String, BodyData> = new Map<String, BodyData>();
 
 	public static function loadPhysicsData(src:String) {
-		var json = Json.parse(Assets.getText("assets/" + src + ".json"));
+		var json = Json.parse(Assets.getText(src + ".json"));
 
 		for (bodyName in Reflect.fields(json)) {
 			var bodyData = new BodyData(Reflect.field(json, bodyName));

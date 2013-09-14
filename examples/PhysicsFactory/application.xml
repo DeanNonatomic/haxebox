@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="PhysicsFactoryExample" package="com.haxebox.physicsfactoryexample" version="0.0.1" company="Nonatomic Ltd" />
+	
+	<app main="Main" file="PhysicsFactoryExample" title="PhysicsFactoryExample" path="bin" />
+
+	<window width="1027" height="768" unless="mobile" />
+	<window fps="60" orientation="landscape" background="0xffffff" />
+
+	<source path="src" />
+	<source path="../../src" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="nape" />
+
+	<assets path="Assets" rename="assets" include="*" />
+
+</project>
